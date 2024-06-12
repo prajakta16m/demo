@@ -2,9 +2,11 @@ package com.example.demo;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ConfigurableApplicationContext;
+import org.springframework.context.annotation.Bean;
 
 @SpringBootApplication
 public class DemoApplication {
@@ -18,6 +20,14 @@ public class DemoApplication {
 		WelcomeMessage welcomeMessage = applicationContext.getBean(WelcomeMessage.class);
 		System.out.println(welcomeMessage.getWelcomeMessage());
 
+	}
+
+	@Bean
+	CommandLineRunner runner() {
+		return args -> {
+			Run run = new Run("Atomic Habits", 5);
+			log.info("Run=" + run);
+		};
 	}
 
 }
