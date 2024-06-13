@@ -8,7 +8,7 @@ public class RunController {
 
   @RequestMapping("/hello")
   String home() {
-    return "Hello World";
+    return "Hello World. You will now get to see Books with ratings.";
   }
 
 }
