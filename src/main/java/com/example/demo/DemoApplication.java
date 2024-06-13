@@ -25,7 +25,7 @@ public class DemoApplication {
 	@Bean
 	CommandLineRunner runner() {
 		return args -> {
-			Run run = new Run("Atomic Habits", 5);
+			Book run = new Book("Atomic Habits", 5);
 			log.info("Run=" + run);
 		};
 	}

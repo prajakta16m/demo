@@ -1,10 +1,10 @@
 package com.example.demo;
 
-public class Run {
+public class Book {
   private String book;
   private Integer rating;
 
-  public Run(String book, Integer rating) {
+  public Book(String book, Integer rating) {
     this.book = book;
     this.rating = rating;
   }
