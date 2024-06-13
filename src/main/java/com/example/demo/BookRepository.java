@@ -3,8 +3,11 @@ package com.example.demo;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.springframework.stereotype.Repository;
+
 import jakarta.annotation.PostConstruct;
 
+@Repository
 public class BookRepository {
 
   private List<Book> books = new ArrayList<>();
