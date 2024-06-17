@@ -1,12 +1,22 @@
 package com.example.demo;
 
 public class Book {
+  private Integer id;
   private String book;
   private Integer rating;
 
-  public Book(String book, Integer rating) {
+  public Book(Integer id, String book, Integer rating) {
+    this.id = id;
     this.book = book;
     this.rating = rating;
+  }
+
+  public Integer getId() {
+    return this.id;
+  }
+
+  public void setId(Integer i) {
+    this.id = i;
   }
 
   public String getBook() {
@@ -28,6 +38,7 @@ public class Book {
   @Override
   public String toString() {
     return "Book{" +
+        "id=" + this.id + "," +
         "book=" + this.book + "," +
         "rating=" + this.rating +
         "}";
