@@ -5,6 +5,7 @@ import java.util.List;
 import java.util.Optional;
 
 import org.springframework.stereotype.Repository;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 import jakarta.annotation.PostConstruct;
 
@@ -23,6 +24,10 @@ public class BookRepository {
 
   Optional<Book> findById(Integer id) {
     return books.stream().filter(b -> b.getId() == id).findFirst();
+  }
+
+  void createBook(Book bk) {
+    this.books.add(bk);
   }
 
   @PostConstruct
