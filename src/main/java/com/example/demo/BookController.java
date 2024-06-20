@@ -52,7 +52,7 @@ public class BookController {
 
   }
 
-  @PostMapping("")
+  @PostMapping("/create")
   @ResponseStatus(HttpStatus.CREATED)
   void createBook(@RequestBody Book book) {
     bookRepository.createBook(book);
