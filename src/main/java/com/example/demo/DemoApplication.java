@@ -23,10 +23,11 @@ public class DemoApplication {
 	}
 
 	@Bean
-	CommandLineRunner runner() {
+	CommandLineRunner runner(BookRepository bookRepository) {
 		return args -> {
-			Book run = new Book(34523, "Atomic Habits", 5);
-			log.info("Run=" + run);
+			Book bk = new Book(2, "Harry Potter", 5);
+			log.info("Book=" + bk);
+			bookRepository.createBook(bk);
 		};
 	}
 

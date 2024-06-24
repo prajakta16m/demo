@@ -8,7 +8,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.jdbc.core.simple.JdbcClient;
 import org.springframework.stereotype.Repository;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.util.Assert;
 
 import jakarta.annotation.PostConstruct;
 
@@ -50,7 +50,17 @@ public class BookRepository {
   }
 
   void createBook(Book bk) {
-    this.books.add(bk);
+    // this.books.add(bk);
+
+    /*
+     * Adding / Creating data instance with namesd parameters.
+     */
+    var updated = this.jdbcClient.sql("INSERT INTO Book(id, book, rating) values (?,?,?)")
+        .param(bk.getId())
+        .param(bk.getBook())
+        .param(bk.getRating())
+        .update();
+
   }
 
   @PostConstruct
