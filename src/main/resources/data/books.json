@@ -1,0 +1,30 @@
+{
+  "books": [
+    {
+      "id": 1,
+      "book": "Atomic Habits",
+      "rating": 5
+    },
+    {
+      "id": 2,
+      "book": "Steal like an Artist",
+      "rating": 4
+    },
+    {
+      "id": 3,
+      "book": "Power",
+      "rating": 5
+    },
+    {
+      "id": 4,
+      "book": "The Subtle Art of Not giving a F*ck",
+      "rating": 3
+    },
+    {
+      "id": 5,
+      "book": "Bhagwat Gita",
+      "rating": 5
+    }
+
+  ]
+}
